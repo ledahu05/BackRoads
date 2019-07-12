@@ -1,3 +1,11 @@
 import React from "react"
-
-export default () => <div>Hello world!</div>
+import Layout from "../components/Layout"
+import { FaBeer } from 'react-icons/fa';
+const index = () => {
+    return (
+        <Layout>
+            Index page <FaBeer />
+        </Layout>
+    )
+}
+export default index
