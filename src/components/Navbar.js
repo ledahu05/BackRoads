@@ -11,7 +11,7 @@ const Navbar = () => {
     setNav(isOpen => !isOpen)
   }
 
-  console.log(socialIcons)
+
 
   return (
     <nav className={styles.navbar}>
