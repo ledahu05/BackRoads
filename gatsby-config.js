@@ -11,7 +11,17 @@ module.exports = {
     description:
       "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
     author: "@appliz",
-    data: ["item1", "item2"],
+    data: ["item1", "item2"]
   },
-  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-styled-components`],
-}
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`
+      }
+    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`
+  ]
+};
