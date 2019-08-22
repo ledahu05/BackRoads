@@ -1,23 +1,24 @@
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
-import Contact from "../components/Contact/Contact"
+import BlogList from "../components/Blog/BlogList"
 import SEO from "../components/SEO"
 
-export default function contact({ data }) {
+const blog = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Contact" />
-      <StyledHero img={data.contactBcg.childImageSharp.fluid} />
-      <Contact />
+      <SEO title="Blog" />
+      <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+      <BlogList />
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
-    contactBcg: file(relativePath: { eq: "connectBcg.jpeg" }) {
+    blogBcg: file(relativePath: { eq: "blogBcg.jpeg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
@@ -26,3 +27,5 @@ export const query = graphql`
     }
   }
 `
+
+export default blog

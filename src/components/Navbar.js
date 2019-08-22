@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-import styles from "../css/navbar.module.css";
-import { FaAlignRight } from "react-icons/fa";
-import links from "../constants/links";
-import socialIcons from "../constants/social-icons";
-import logo from "../images/logo.svg";
+import React, { useState } from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import styles from "../css/navbar.module.css"
+import { FaAlignRight } from "react-icons/fa"
+import links from "../constants/links"
+import socialIcons from "../constants/social-icons"
+import logo from "../images/logo.svg"
 const Navbar = () => {
-  const [isOpen, setNav] = useState();
+  const [isOpen, setNav] = useState()
   const toggleNav = () => {
-    setNav(isOpen => !isOpen);
-  };
+    setNav(isOpen => !isOpen)
+  }
 
   return (
     <nav className={styles.navbar}>
@@ -34,7 +34,7 @@ const Navbar = () => {
                   {item.text}
                 </AniLink>
               </li>
-            );
+            )
           })}
         </ul>
         <div className={styles.navSocialLinks}>
@@ -48,12 +48,12 @@ const Navbar = () => {
               >
                 {item.icon}
               </a>
-            );
+            )
           })}
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "../css/footer.module.css";
-import links from "../constants/links";
-import socialIcons from "../constants/social-icons";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import React from "react"
+import styles from "../css/footer.module.css"
+import links from "../constants/links"
+import socialIcons from "../constants/social-icons"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
             <AniLink fade key={index} to={item.path}>
               {item.text}
             </AniLink>
-          );
+          )
         })}
       </div>
       <div className={styles.icons}>
@@ -27,7 +27,7 @@ const Footer = () => {
             >
               {item.icon}
             </a>
-          );
+          )
         })}
       </div>
       <div className={styles.copyright}>
@@ -35,7 +35,7 @@ const Footer = () => {
         rights reserved
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
