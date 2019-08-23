@@ -18,6 +18,10 @@
   font-size: 1.5rem;
 }
 
+.logo {
+  width: 50px;
+}
+
 .nav-links {
   list-style-type: none;
   transition: var(--mainTransition);
